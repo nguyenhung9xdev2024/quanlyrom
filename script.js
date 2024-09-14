@@ -27,6 +27,7 @@ $(document).ready(function() {
 
             // Thêm sự kiện click cho các nút "Xem chi tiết"
             $('.view-details-btn').on('click', function() {
+                var romDetails = $(this).data('details');
                 var deviceImage = $(this).data('image');
                 var name = $(this).data('name');
                 var deviceName = $(this).data('device-name');
