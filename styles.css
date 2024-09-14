@@ -131,4 +131,8 @@ th, td {
     .image-section img {
         width: 100%; /* Đảm bảo hình ảnh chiếm đủ chiều rộng của popup */
     }
+
+    #rom-detail-popup {
+        z-index: 1000;
+    }
 }
