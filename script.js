@@ -1,32 +1,28 @@
 $(document).ready(function() {
-    var table = $('#rom-table').DataTable({
-        responsive: true,
-        "lengthMenu": [ [10, 20, 30], [10, 20, 30] ]
-    });
-
-    // Lấy dữ liệu từ file JSON và thêm vào bảng
     fetch('rom-data.json')
         .then(response => response.json())
         .then(data => {
+            let container = $('.rom-card-container');
             data.forEach(rom => {
-                table.row.add([
-                    rom.release_date,
-                    rom.device_name,
-                    rom.android_version,
-                    rom.name,
-                    rom.rom_type,
-                    `<button class="view-details-btn" 
-                        data-details="${rom.rom_details}" 
-                        data-image="${rom.image_url}" 
-                        data-name="${rom.name}"
-                        data-device-name="${rom.device_name}"
-                        data-android-version="${rom.android_version}"
-                        data-release-date="${rom.release_date}"
-                        data-rom-type="${rom.rom_type}"
-                        data-hardware-cpu="${rom.hardware_specs ? rom.hardware_specs.cpu : 'N/A'}"
-                        data-hardware-ram="${rom.hardware_specs ? rom.hardware_specs.ram : 'N/A'}"
-                        data-hardware-storage="${rom.hardware_specs ? rom.hardware_specs.storage : 'N/A'}">Xem chi tiết</button>`
-                ]).draw(false);
+                let romCard = `
+                    <div class="rom-card">
+                        <img src="${rom.image_url}" alt="${rom.device_name}" class="rom-image">
+                        <h3>${rom.device_name}</h3>
+                        <p>Phiên bản Android: ${rom.android_version}</p>
+                        <p>Ngày phát hành: ${rom.release_date}</p>
+                        <button class="view-details-btn" 
+                            data-details="${rom.rom_details}" 
+                            data-image="${rom.image_url}" 
+                            data-name="${rom.name}"
+                            data-device-name="${rom.device_name}"
+                            data-android-version="${rom.android_version}"
+                            data-release-date="${rom.release_date}"
+                            data-rom-type="${rom.rom_type}"
+                            data-hardware-cpu="${rom.hardware_specs ? rom.hardware_specs.cpu : 'N/A'}"
+                            data-hardware-ram="${rom.hardware_specs ? rom.hardware_specs.ram : 'N/A'}"
+                            data-hardware-storage="${rom.hardware_specs ? rom.hardware_specs.storage : 'N/A'}">Xem chi tiết</button>
+                    </div>`;
+                container.append(romCard);
             });
 
              // Thêm sự kiện click và touchstart cho các nút "Xem chi tiết"

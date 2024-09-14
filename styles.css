@@ -51,6 +51,50 @@ th, td {
     white-space: normal; /* Cho phép xuống dòng khi không đủ không gian */
 }
 
+.rom-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.rom-card {
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rom-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.rom-card h3 {
+    margin: 15px 0 10px;
+}
+
+.rom-card p {
+    margin: 5px 0;
+}
+
+.view-details-btn {
+    padding: 10px 15px;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-details-btn:hover {
+    background-color: #d32f2f;
+}
+
 /* CSS cho Popup */
 .popup {
     display: none;
