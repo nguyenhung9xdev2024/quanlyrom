@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background: linear-gradient(45deg, #d4af37, #f2c94c, #d4af37);
     padding: 20px;
 }
 
@@ -25,14 +25,16 @@ input[type="text"], button {
 }
 
 button {
-    background: linear-gradient(45deg, #FF5733, #FFC300);
+    background-color: #d4af37; /* Mã màu vàng ánh kim */
     color: white;
     border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
     cursor: pointer;
 }
 
 button:hover {
-    background: linear-gradient(45deg, #C13E1D, #FFAA00);
+    background-color: #b5892b;
 }
 
 table {
