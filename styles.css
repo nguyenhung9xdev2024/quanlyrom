@@ -25,14 +25,14 @@ input[type="text"], button {
 }
 
 button {
-    background-color: #28a745;
+    background: linear-gradient(45deg, #FF5733, #FFC300);
     color: white;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #218838;
+    background: linear-gradient(45deg, #C13E1D, #FFAA00);
 }
 
 table {
