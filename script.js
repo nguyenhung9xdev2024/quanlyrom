@@ -24,7 +24,7 @@ $(document).ready(function() {
                 var formattedDetails = "<ul><li>" + romDetails.split('\n').join('</li><li>') + "</li></ul>";
                 var deviceImage = $(this).data('image');
                 $('#rom-details').html(romDetails);
-                $('#device-image').attr('src', romImage); // Thay đổi hình ảnh theo model
+                $('#device-image').attr('src', deviceImage);
                 $('#rom-detail-popup').show();
             });
         });
