@@ -6,5 +6,21 @@
         "name": "SAMSUNG",
         "rom_type": "ROM GỐC",
         "rom_details": "Tính năng 1: Không cần bật USB Debugging\nTính năng 2: Tự khởi động khi có nguồn sạc\nTính năng 3: Reg được mail\nTính năng 4: Sử dụng được không màn"
+    },
+    {
+        "release_date": "14/09/2024",
+        "device_name": "Samsung Galaxy A30",
+        "android_version": "11",
+        "name": "SAMSUNG",
+        "rom_type": "ROM GỐC",
+        "rom_details": "Tính năng 1: Không cần bật USB Debugging\nTính năng 2: Tự khởi động khi có nguồn sạc\nTính năng 3: Reg được mail\nTính năng 4: Sử dụng được không màn"
+    },
+    {
+        "release_date": "14/09/2024",
+        "device_name": "Samsung Galaxy J6",
+        "android_version": "10",
+        "name": "SAMSUNG",
+        "rom_type": "ROM GỐC",
+        "rom_details": "Tính năng 1: Không cần bật USB Debugging\nTính năng 2: Tự khởi động khi có nguồn sạc\nTính năng 3: Reg được mail\nTính năng 4: Sử dụng được không màn"
     }
 ]
