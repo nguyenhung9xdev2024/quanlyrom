@@ -20,6 +20,25 @@ $(document).ready(function() {
             });
         });
 
+        // Thêm sự kiện click cho các nút "Xem chi tiết"
+        $('.view-details-btn').on('click', function() {
+            var romDetails = $(this).data('details');
+            $('#rom-details').html(romDetails);
+            $('#rom-detail-popup').show();
+        });
+    
+    // Đóng popup khi bấm vào nút đóng (x)
+    $('.close').on('click', function() {
+        $('#rom-detail-popup').hide();
+    });
+
+    // Đóng popup khi bấm ngoài vùng popup
+    $(window).on('click', function(event) {
+        if ($(event.target).is('#rom-detail-popup')) {
+            $('#rom-detail-popup').hide();
+        }
+    });
+
     // Chức năng tìm kiếm đơn giản
     $('#search-btn').on('click', function() {
         var keyword = $('#search-box').val();
