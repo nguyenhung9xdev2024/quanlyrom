@@ -59,6 +59,7 @@ th, td {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
 }
 
 .popup-content {
@@ -125,7 +126,7 @@ th, td {
     }
 
     .popup-content {
-        width: 90%; /* Điều chỉnh độ rộng của popup cho màn hình nhỏ */
+        width: 95%; /* Điều chỉnh độ rộng của popup cho màn hình nhỏ */
         height: auto;
         max-height: 80vh; /* Giới hạn chiều cao tối đa để tránh popup bị vượt quá màn hình */
         overflow-y: auto;
@@ -139,6 +140,7 @@ th, td {
 
     .image-section img {
         width: 100%; /* Đảm bảo hình ảnh chiếm đủ chiều rộng của popup */
+        height: auto;
     }
 
     #rom-detail-popup {

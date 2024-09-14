@@ -68,12 +68,12 @@ $(document).ready(function() {
         });
 
     // Đóng popup khi bấm vào nút đóng (x)
-    $('.close').on('click', function() {
+    $('.close').on('click touchstart', function() {
         $('#rom-detail-popup').hide();
     });
 
     // Đóng popup khi bấm ngoài vùng popup
-    $(window).on('click', function(event) {
+    $(window).on('click touchstart', function(event) {
         if ($(event.target).is('#rom-detail-popup')) {
             $('#rom-detail-popup').hide();
         }
