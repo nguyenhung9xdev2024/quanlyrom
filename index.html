@@ -23,12 +23,22 @@
                     <th>Phiên Bản Android</th>
                     <th>Tên ROM</th>
                     <th>Loại Rom</th>
+                    <th>Chi Tiết</th>
                 </tr>
             </thead>
             <tbody>
                 <!-- Dữ liệu sẽ được thêm từ file JSON thông qua JavaScript -->
             </tbody>
         </table>
+
+        <!-- Popup HTML -->
+        <div id="rom-detail-popup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                    <h2>Chi Tiết ROM</h2>
+                <p id="rom-details"></p>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

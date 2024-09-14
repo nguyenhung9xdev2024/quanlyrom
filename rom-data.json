@@ -1,16 +1,10 @@
 [
     {
-        "release_date": "01/09/2024",
-        "device_name": "Samsung Galaxy S21",
+        "release_date": "14/09/2024",
+        "device_name": "Samsung Galaxy A04",
         "android_version": "11",
-        "name": "Pixel Experience",
-        "rom_type": "ROM CUSTOM"
-    },
-    {
-        "release_date": "02/09/2024",
-        "device_name": "Xiaomi Mi 10",
-        "android_version": "12",
-        "name": "LineageOS",
-        "rom_type": "ROM CUSTOM"
+        "name": "SAMSUNG",
+        "rom_type": "ROM GỐC",
+        "rom_details": "• Tính năng 1: Không cần bật USB Debugging, fix được một vài ứng dụng và game bị detect\n• Tính năng 2: Tự khởi động khi có nguồn sạc\n• Tính năng 3: Reg được mail\n• Tính năng 4: Sử dụng được không màn"
     }
 ]
