@@ -14,7 +14,8 @@ $(document).ready(function() {
                     rom.device_name,
                     rom.android_version,
                     rom.name,
-                    rom.rom_type
+                    rom.rom_type,
+                    `<button class="view-details-btn" data-details="${rom.rom_details}">Xem chi tiết</button>`
                 ]).draw(false);
             });
         });
