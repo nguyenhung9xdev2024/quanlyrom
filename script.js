@@ -29,8 +29,10 @@ $(document).ready(function() {
                 ]).draw(false);
             });
 
-            // Thêm sự kiện click cho các nút "Xem chi tiết"
-            $('.view-details-btn').on('click', function() {
+             // Thêm sự kiện click và touchstart cho các nút "Xem chi tiết"
+             $('.view-details-btn').on('click touchstart', function(event) {
+                event.preventDefault();
+
                 var romDetails = $(this).data('details');
                 var deviceImage = $(this).data('image');
                 var name = $(this).data('name');

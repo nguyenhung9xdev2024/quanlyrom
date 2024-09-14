@@ -117,6 +117,15 @@ th, td {
 
     .popup-content {
         width: 90%; /* Điều chỉnh độ rộng của popup cho màn hình nhỏ */
+        height: auto;
+        max-height: 80vh; /* Giới hạn chiều cao tối đa để tránh popup bị vượt quá màn hình */
+        overflow-y: auto;
+    }
+
+    .popup-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .image-section img {
