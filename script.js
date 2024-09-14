@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    // Khởi tạo DataTable
     var table = $('#rom-table').DataTable({
         "lengthMenu": [ [10, 20, 30], [10, 20, 30] ]
     });
@@ -18,15 +17,15 @@ $(document).ready(function() {
                     `<button class="view-details-btn" data-details="${rom.rom_details}">Xem chi tiết</button>`
                 ]).draw(false);
             });
+
+            // Thêm sự kiện click cho các nút "Xem chi tiết"
+            $('.view-details-btn').on('click', function() {
+                var romDetails = $(this).data('details');
+                $('#rom-details').html(romDetails);
+                $('#rom-detail-popup').show();
+            });
         });
 
-        // Thêm sự kiện click cho các nút "Xem chi tiết"
-        $('.view-details-btn').on('click', function() {
-            var romDetails = $(this).data('details');
-            $('#rom-details').html(romDetails);
-            $('#rom-detail-popup').show();
-        });
-    
     // Đóng popup khi bấm vào nút đóng (x)
     $('.close').on('click', function() {
         $('#rom-detail-popup').hide();
@@ -37,11 +36,5 @@ $(document).ready(function() {
         if ($(event.target).is('#rom-detail-popup')) {
             $('#rom-detail-popup').hide();
         }
-    });
-
-    // Chức năng tìm kiếm đơn giản
-    $('#search-btn').on('click', function() {
-        var keyword = $('#search-box').val();
-        table.search(keyword).draw();
     });
 });
