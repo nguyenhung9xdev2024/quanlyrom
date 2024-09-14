@@ -22,9 +22,9 @@ $(document).ready(function() {
                         data-android-version="${rom.android_version}"
                         data-release-date="${rom.release_date}"
                         data-rom-type="${rom.rom_type}"
-                        data-hardware-cpu="${rom.hardware_specs.cpu}"
-                        data-hardware-ram="${rom.hardware_specs.ram}"
-                        data-hardware-storage="${rom.hardware_specs.storage}">Xem chi tiết</button>`
+                        data-hardware-cpu="${rom.hardware_specs ? rom.hardware_specs.cpu : 'N/A'}"
+                        data-hardware-ram="${rom.hardware_specs ? rom.hardware_specs.ram : 'N/A'}"
+                        data-hardware-storage="${rom.hardware_specs ? rom.hardware_specs.storage : 'N/A'}">Xem chi tiết</button>`
                 ]).draw(false);
             });
 
