@@ -13,8 +13,8 @@ $(document).ready(function() {
                     rom.release_date,
                     rom.device_name,
                     rom.android_version,
-                    rom.developer_name,
-                    `<a href="${rom.download_link}" target="_blank">Tải ROM</a>`
+                    rom.name,
+                    rom.type
                 ]).draw(false);
             });
         });
