@@ -22,7 +22,9 @@ $(document).ready(function() {
             $('.view-details-btn').on('click', function() {
                 var romDetails = $(this).data('details');
                 var formattedDetails = "<ul><li>" + romDetails.split('\n').join('</li><li>') + "</li></ul>";
+                var device-image = $(this).data('image');
                 $('#rom-details').html(romDetails);
+                $('#device-image').attr('src', romImage); // Thay đổi hình ảnh theo model
                 $('#rom-detail-popup').show();
             });
         });
