@@ -14,16 +14,16 @@ $(document).ready(function() {
                     rom.android_version,
                     rom.name,
                     rom.rom_type,
-                    `<button class="view-details-btn" data-details="${rom.rom_details}">Xem chi tiết</button>`
+                    `<button class="view-details-btn" data-details="${rom.rom_details}" data-image="${rom.image_url}">Xem chi tiết</button>`
                 ]).draw(false);
             });
 
             // Thêm sự kiện click cho các nút "Xem chi tiết"
             $('.view-details-btn').on('click', function() {
                 var romDetails = $(this).data('details');
-                var formattedDetails = "<ul><li>" + romDetails.split('\n').join('</li><li>') + "</li></ul>";
                 var deviceImage = $(this).data('image');
-                $('#rom-details').html(romDetails);
+                var formattedDetails = "<ul><li>" + romDetails.split('\n').join('</li><li>') + "</li></ul>";
+                $('#rom-details').html(formattedDetails);
                 $('#device-image').attr('src', deviceImage);
                 $('#rom-detail-popup').show();
             });
