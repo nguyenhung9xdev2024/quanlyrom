@@ -61,23 +61,27 @@ th, td {
 
 .popup-content {
     background-color: white;
-    margin: 15% auto;
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 600px;
+    max-width: 800px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+.popup-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.close:hover, .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.image-section {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.text-section {
+    flex: 2;
 }
