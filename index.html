@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROM Android Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quản lý ROM Android</h1>
+        <p>Dữ liệu ROM được cập nhật từ nguồn công ty, bạn có thể tìm kiếm ROM theo thiết bị.</p>
+
+        <input type="text" id="search-box" placeholder="Nhập tên thiết bị hoặc phiên bản Android...">
+        <button id="search-btn">Tìm kiếm</button>
+
+        <table id="rom-table" class="display">
+            <thead>
+                <tr>
+                    <th>Ngày phát hành</th>
+                    <th>Tên Thiết Bị</th>
+                    <th>Phiên Bản Android</th>
+                    <th>Nhà Phát Triển</th>
+                    <th>Link Tải ROM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dữ liệu sẽ được thêm từ file JSON thông qua JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
