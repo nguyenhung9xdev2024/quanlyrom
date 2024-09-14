@@ -92,10 +92,15 @@ th, td {
     margin-top: 10px;
 }
 
+.popup-content {
+    position: relative;
+    padding: 20px;
+}
+
 #popup-logo {
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 50px; /* Kích thước logo */
+    width: 100px; /* Kích thước logo */
     height: auto;
 }
