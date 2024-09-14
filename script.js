@@ -21,6 +21,7 @@ $(document).ready(function() {
             // Thêm sự kiện click cho các nút "Xem chi tiết"
             $('.view-details-btn').on('click', function() {
                 var romDetails = $(this).data('details');
+                var formattedDetails = "<ul><li>" + romDetails.split('\n').join('</li><li>') + "</li></ul>";
                 $('#rom-details').html(romDetails);
                 $('#rom-detail-popup').show();
             });
