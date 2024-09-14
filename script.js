@@ -14,7 +14,7 @@ $(document).ready(function() {
                     rom.device_name,
                     rom.android_version,
                     rom.name,
-                    rom.type
+                    rom.rom_type
                 ]).draw(false);
             });
         });
