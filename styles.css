@@ -85,3 +85,9 @@ th, td {
 .text-section {
     flex: 2;
 }
+
+#rom-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
