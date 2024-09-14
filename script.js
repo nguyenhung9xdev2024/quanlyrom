@@ -30,7 +30,7 @@ $(document).ready(function() {
             });
 
              // Thêm sự kiện click và touchstart cho các nút "Xem chi tiết"
-             $('.view-details-btn').on('click touchstart', function(event) {
+             $('.view-details-btn').on('click touchend', function(event) {
                 event.preventDefault();
 
                 var romDetails = $(this).data('details');
@@ -68,12 +68,12 @@ $(document).ready(function() {
         });
 
     // Đóng popup khi bấm vào nút đóng (x)
-    $('.close').on('click touchstart', function() {
+    $('.close').on('click touchend', function() {
         $('#rom-detail-popup').hide();
     });
 
     // Đóng popup khi bấm ngoài vùng popup
-    $(window).on('click touchstart', function(event) {
+    $(window).on('click touchend', function(event) {
         if ($(event.target).is('#rom-detail-popup')) {
             $('#rom-detail-popup').hide();
         }
