@@ -45,6 +45,8 @@ th, td {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    word-wrap: break-word; /* Đảm bảo nội dung trong ô sẽ xuống dòng */
+    white-space: normal; /* Cho phép xuống dòng khi không đủ không gian */
 }
 
 /* CSS cho Popup */
@@ -113,6 +115,13 @@ th, td {
 
     #rom-table {
         font-size: 12px;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    th, td {
+        word-wrap: break-word;
+        white-space: normal;
     }
 
     .popup-content {
