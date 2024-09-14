@@ -1,5 +1,6 @@
 $(document).ready(function() {
     var table = $('#rom-table').DataTable({
+        responsive: true,
         "lengthMenu": [ [10, 20, 30], [10, 20, 30] ]
     });
 

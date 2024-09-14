@@ -104,3 +104,22 @@ th, td {
     width: 100px; /* Kích thước logo */
     height: auto;
 }
+
+/* Reponsive */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    #rom-table {
+        font-size: 12px;
+    }
+
+    .popup-content {
+        width: 90%; /* Điều chỉnh độ rộng của popup cho màn hình nhỏ */
+    }
+
+    .image-section img {
+        width: 100%; /* Đảm bảo hình ảnh chiếm đủ chiều rộng của popup */
+    }
+}
