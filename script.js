@@ -21,7 +21,10 @@ $(document).ready(function() {
                         data-device-name="${rom.device_name}"
                         data-android-version="${rom.android_version}"
                         data-release-date="${rom.release_date}"
-                        data-rom-type="${rom.rom_type}">Xem chi tiết</button>`
+                        data-rom-type="${rom.rom_type}"
+                        data-hardware-cpu="${rom.hardware_specs.cpu}"
+                        data-hardware-ram="${rom.hardware_specs.ram}"
+                        data-hardware-storage="${rom.hardware_specs.storage}">Xem chi tiết</button>`
                 ]).draw(false);
             });
 
@@ -35,6 +38,11 @@ $(document).ready(function() {
                 var releaseDate = $(this).data('release-date');
                 var romType = $(this).data('rom-type');
 
+                // Thông số phần cứng
+                var hardwareCpu = $(this).data('hardware-cpu');
+                var hardwareRam = $(this).data('hardware-ram');
+                var hardwareStorage = $(this).data('hardware-storage');
+
                 var formattedDetails = romDetails.split('\n').map(function(detail) {
                     return '<li>' + detail + '</li>';
                 }).join('');
@@ -46,6 +54,11 @@ $(document).ready(function() {
                 $('#android_version').text(androidVersion);
                 $('#release_date').text(releaseDate);
                 $('#rom_type').text(romType);
+
+                // Cập nhật thông số phần cứng
+                $('#hardware_cpu').text(hardwareCpu);
+                $('#hardware_ram').text(hardwareRam);
+                $('#hardware_storage').text(hardwareStorage);
 
                 $('#rom-detail-popup').show();
             });
