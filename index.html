@@ -31,21 +31,27 @@
             </tbody>
         </table>
 
-        <!-- Popup HTML -->
-        <div id="rom-detail-popup" class="popup">
-            <div class="popup-content">
-                <span class="close">&times;</span>
-                    <h2>Chi Tiết ROM</h2>
-            <div class="popup-body">
-                <div class="image-section">
-                    <img id="device-image" src="" alt="Device Image" style="width:200px;height:auto;">
-                </div>
+<!-- Popup HTML -->
+<div id="rom-detail-popup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <h2>Chi Tiết ROM</h2>
+        <div class="popup-body">
+            <div class="image-section">
+                <img id="device-image" src="" alt="Device Image" style="width:200px;height:auto;">
+            </div>
             <div class="text-section">
+                <p><strong>OEM:</strong> <span id="name"></span></p>
+                <p><strong>Codename:</strong> <span id="device_name"></span></p>
+                <p><strong>Android:</strong> <span id="android_version"></span></p>
+                <p><strong>Build Date:</strong> <span id="release_date"></span></p>
+                <p><strong>Build Type:</strong> <span id="rom_type"></span></p>
                 <p id="rom-details"></p>
             </div>
         </div>
     </div>
 </div>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>

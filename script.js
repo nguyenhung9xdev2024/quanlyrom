@@ -14,7 +14,14 @@ $(document).ready(function() {
                     rom.android_version,
                     rom.name,
                     rom.rom_type,
-                    `<button class="view-details-btn" data-details="${rom.rom_details}" data-image="${rom.image_url}">Xem chi tiết</button>`
+                    `<button class="view-details-btn" 
+                        data-details="${rom.rom_details}" 
+                        data-image="${rom.image_url}" 
+                        data-name="${rom.name}"
+                        data-device-name="${rom.device_name}"
+                        data-android-version="${rom.android_version}"
+                        data-release-date="${rom.release_date}"
+                        data-rom-type="${rom.rom_type}">Xem chi tiết</button>`
                 ]).draw(false);
             });
 
@@ -22,9 +29,19 @@ $(document).ready(function() {
             $('.view-details-btn').on('click', function() {
                 var romDetails = $(this).data('details');
                 var deviceImage = $(this).data('image');
-                var formattedDetails = "<ul><li>" + romDetails.split('\n').join('</li><li>') + "</li></ul>";
-                $('#rom-details').html(formattedDetails);
+                var name = $(this).data('name');
+                var deviceName = $(this).data('device-name');
+                var androidVersion = $(this).data('android-version');
+                var releaseDate = $(this).data('release-date');
+                var romType = $(this).data('rom-type');
+                $('#rom-details').html(romDetails);
                 $('#device-image').attr('src', deviceImage);
+                $('#name').text(name);
+                $('#device_name').text(deviceName);
+                $('#android_version').text(androidVersion);
+                $('#release_date').text(releaseDate);
+                $('#rom_type').text(romType);
+
                 $('#rom-detail-popup').show();
             });
         });
