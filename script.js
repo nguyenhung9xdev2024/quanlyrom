@@ -11,13 +11,13 @@ $(document).ready(function() {
                         <p>Phiên bản Android: ${rom.android_version}</p>
                         <p>Thể loại rom: ${rom.rom_type}</p>
                         <button class="view-details-btn" 
-                            data-details="${rom.rom_details}" 
-                            data-image="${rom.image_url}" 
-                            data-name="${rom.name}"
-                            data-device-name="${rom.device_name}"
-                            data-android-version="${rom.android_version}"
-                            data-release-date="${rom.release_date}"
-                            data-rom-type="${rom.rom_type}"
+                            data-details="${rom.rom_details ? rom.rom_details : 'Updating'}" 
+                            data-image="${rom.image_url ? rom.image_url : 'Updating' }" 
+                            data-name="${rom.name ? rom.name : 'Updating'}"
+                            data-device-name="${rom.device_name ? rom.device_name : 'Updating'}"
+                            data-android-version="${rom.android_version ? rom.android_version : 'Updating'}"
+                            data-release-date="${rom.release_date ? rom.release_date : 'Updating'}"
+                            data-rom-type="${rom.rom_type ? rom.rom_type : 'Updating'}"
                             data-hardware-cpu="${rom.hardware_specs ? rom.hardware_specs.cpu : 'N/A'}"
                             data-hardware-ram="${rom.hardware_specs ? rom.hardware_specs.ram : 'N/A'}"
                             data-hardware-storage="${rom.hardware_specs ? rom.hardware_specs.storage : 'N/A'}">Xem chi tiết</button>

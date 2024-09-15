@@ -15,6 +15,20 @@
     },
     {
         "release_date": "14/09/2024",
+        "device_name": "Samsung Galaxy A05",
+        "android_version": "",
+        "name": "SAMSUNG",
+        "rom_type": "",
+        "rom_details": "",
+        "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a05.jpg",
+        "hardware_specs": {
+            "cpu": "",
+            "ram": "",
+            "storage": ""
+        }
+    },
+    {
+        "release_date": "14/09/2024",
         "device_name": "Samsung Galaxy A30",
         "android_version": "11",
         "name": "SAMSUNG",
