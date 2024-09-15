@@ -13,20 +13,19 @@ $(document).ready(function() {
             $('#filter-btn').on('click', function() {
                 console.log("Nút lọc được nhấn");
 
-                // Lấy giá trị từ các bộ lọc
-                const deviceFilter = $('#device-filter').val().toLowerCase();
-                const versionFilter = $('#version-filter').val();
-                const romTypeFilter = $('#rom-type-filter').val();
+                // Lấy giá trị từ các bộ lọc và loại bỏ khoảng trắng dư thừa
+                const deviceFilter = $('#device-filter').val().trim().toLowerCase();
+                const versionFilter = $('#version-filter').val().trim();
+                const romTypeFilter = $('#rom-type-filter').val().trim();
 
                 console.log("Bộ lọc tên thiết bị:", deviceFilter);
                 console.log("Bộ lọc phiên bản Android:", versionFilter);
                 console.log("Bộ lọc thể loại ROM:", romTypeFilter);
 
-                // Lọc dữ liệu
                 const filteredData = data.filter(rom => {
                     const deviceMatch = rom.device_name.toLowerCase().includes(deviceFilter);
                     const versionMatch = versionFilter === '' || rom.android_version == versionFilter;
-                    const romTypeMatch = romTypeFilter === '' || rom.rom_type === romTypeFilter;
+                    const romTypeMatch = romTypeFilter === '' || rom.rom_type.trim().toLowerCase() === romTypeFilter.toLowerCase();
                     
                     // Kiểm tra điều kiện lọc cho từng rom
                     console.log("Thiết bị:", rom.device_name, " - deviceMatch:", deviceMatch, 
