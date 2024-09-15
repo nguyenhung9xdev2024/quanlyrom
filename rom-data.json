@@ -29,12 +29,54 @@
     },
     {
         "release_date": "14/09/2024",
-        "device_name": "Samsung Galaxy A30",
-        "android_version": "11",
+        "device_name": "Samsung Galaxy A6 2018",
+        "android_version": "",
         "name": "SAMSUNG",
-        "rom_type": "ROM GỐC",
-        "rom_details": "Tính năng 1: Không cần bật USB Debugging, adb tự động\nTính năng 2: Tự khởi động khi có nguồn sạc\nTính năng 3: Reg được mail\nTính năng 4: Sử dụng được không màn",
-        "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a30.jpg"
+        "rom_type": "",
+        "rom_details": "",
+        "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a6-2018-.jpg",
+        "hardware_specs": {
+            "cpu": "",
+            "ram": "",
+            "storage": ""
+        }
+    },
+    {
+        "release_date": "14/09/2024",
+        "device_name": "Samsung Galaxy A7 2018",
+        "android_version": "",
+        "name": "SAMSUNG",
+        "rom_type": "",
+        "rom_details": "",
+        "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a7-sm-a750f.jpg",
+        "hardware_specs": {
+            "cpu": "",
+            "ram": "",
+            "storage": ""
+        }
+    },
+    {
+        "release_date": "14/09/2024",
+        "device_name": "Samsung Galaxy A8 2018",
+        "android_version": "",
+        "name": "SAMSUNG",
+        "rom_type": "",
+        "rom_details": "",
+        "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a8-a530f.jpg",
+        "hardware_specs": {
+            "cpu": "",
+            "ram": "",
+            "storage": ""
+        }
+    },
+    {
+        "release_date": "14/09/2024",
+        "device_name": "Samsung Galaxy A10",
+        "android_version": "",
+        "name": "SAMSUNG",
+        "rom_type": "",
+        "rom_details": "",
+        "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a10.jpg"
     },
     {
         "release_date": "14/09/2024",
@@ -44,6 +86,15 @@
         "rom_type": "",
         "rom_details": "",
         "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a20.jpg"
+    },
+    {
+        "release_date": "14/09/2024",
+        "device_name": "Samsung Galaxy A30",
+        "android_version": "11",
+        "name": "SAMSUNG",
+        "rom_type": "ROM GỐC",
+        "rom_details": "Tính năng 1: Không cần bật USB Debugging, adb tự động\nTính năng 2: Tự khởi động khi có nguồn sạc\nTính năng 3: Reg được mail\nTính năng 4: Sử dụng được không màn",
+        "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a30.jpg"
     },
     {
         "release_date": "14/09/2024",
