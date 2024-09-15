@@ -135,7 +135,7 @@ $(document).ready(function() {
                     url: `${ngrokUrl}/api/download-rom`, // Sử dụng URL Ngrok động
                     method: 'POST',
                     contentType: 'application/json',
-                    data: JSON.stringify({ token: token, romId: romId }),
+                    data: JSON.stringify({ token: token, romId: deviceName }),
                     success: function(response) {
                         if (response.success) {
                             window.location.href = response.romLink;  // Tải ROM
