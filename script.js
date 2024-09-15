@@ -1,36 +1,57 @@
 $(document).ready(function() {
+    // Lấy dữ liệu từ JSON
     fetch('rom-data.json')
         .then(response => response.json())
         .then(data => {
             let container = $('.rom-card-container');
             renderRomCards(data, container);
 
+            // Kiểm tra xem dữ liệu JSON có được nạp đúng không
+            console.log("Dữ liệu ROM:", data);
+
             // Thêm sự kiện cho nút lọc
             $('#filter-btn').on('click', function() {
+                console.log("Nút lọc được nhấn");
+
+                // Lấy giá trị từ các bộ lọc
                 const deviceFilter = $('#device-filter').val().toLowerCase();
                 const versionFilter = $('#version-filter').val();
                 const romTypeFilter = $('#rom-type-filter').val();
 
+                console.log("Bộ lọc tên thiết bị:", deviceFilter);
+                console.log("Bộ lọc phiên bản Android:", versionFilter);
+                console.log("Bộ lọc thể loại ROM:", romTypeFilter);
+
+                // Lọc dữ liệu
                 const filteredData = data.filter(rom => {
                     const deviceMatch = rom.device_name.toLowerCase().includes(deviceFilter);
                     const versionMatch = versionFilter === '' || rom.android_version == versionFilter;
                     const romTypeMatch = romTypeFilter === '' || rom.rom_type === romTypeFilter;
+                    
+                    // Kiểm tra điều kiện lọc cho từng rom
+                    console.log("Thiết bị:", rom.device_name, " - deviceMatch:", deviceMatch, 
+                                " - versionMatch:", versionMatch, " - romTypeMatch:", romTypeMatch);
+                    
                     return deviceMatch && versionMatch && romTypeMatch;
                 });
 
+                console.log("Dữ liệu đã lọc:", filteredData);
+
+                // Xóa các thẻ cũ và hiển thị các thẻ đã lọc
                 container.empty();
                 renderRomCards(filteredData, container);
             });
         });
 
+    // Hàm render lại các thẻ sau khi lọc
     function renderRomCards(data, container) {
         data.forEach(rom => {
             let romCard = `
                 <div class="rom-card">
                     <img src="${rom.image_url}" alt="${rom.device_name}" class="rom-image">
                     <h3>${rom.device_name}</h3>
-                    <p class="android-version">Phiên bản Android: ${rom.android_version}</p>
-                    <p class="rom-type">Thể loại rom: ${rom.rom_type}</p>
+                    <p>Phiên bản Android: ${rom.android_version}</p>
+                    <p>Thể loại rom: ${rom.rom_type}</p>
                     <button class="view-details-btn" 
                         data-details="${rom.rom_details ? rom.rom_details : 'Updating'}" 
                         data-image="${rom.image_url ? rom.image_url : 'Updating' }" 
@@ -58,6 +79,7 @@ $(document).ready(function() {
             var releaseDate = $(this).data('release-date');
             var romType = $(this).data('rom-type');
 
+            // Thông số phần cứng
             var hardwareCpu = $(this).data('hardware-cpu');
             var hardwareRam = $(this).data('hardware-ram');
             var hardwareStorage = $(this).data('hardware-storage');
@@ -73,6 +95,8 @@ $(document).ready(function() {
             $('#android_version').text(androidVersion);
             $('#release_date').text(releaseDate);
             $('#rom_type').text(romType);
+
+            // Cập nhật thông số phần cứng
             $('#hardware_cpu').text(hardwareCpu);
             $('#hardware_ram').text(hardwareRam);
             $('#hardware_storage').text(hardwareStorage);
