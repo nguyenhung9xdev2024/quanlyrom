@@ -11,7 +11,8 @@
             "cpu": "",
             "ram": "",
             "storage": ""
-        }
+        },
+        "rom_link": "/roms/samsung-galaxy-s7-rom.zip"
     },
     {
         "release_date": "14/09/2024",
