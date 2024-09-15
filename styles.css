@@ -167,11 +167,21 @@ th, td {
     }
 
     .rom-card-container {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        display: grid;
+        grid-template-columns: 1fr; /* Một cột trên thiết bị di động */
+        gap: 20px;
     }
 
     .rom-card {
         width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .rom-image {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
     }
 
     th, td {
