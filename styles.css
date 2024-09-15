@@ -75,7 +75,8 @@ th, td {
 
 .rom-image {
     width: 100%;
-    height: auto;
+    height: 200px
+    object-fit: cover; /* Cắt hình ảnh để vừa với kích thước mà không làm biến dạng */
     border-radius: 8px;
 }
 
