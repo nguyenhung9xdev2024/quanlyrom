@@ -132,7 +132,7 @@ $(document).ready(function() {
 
                 // Gửi yêu cầu tới API để kiểm tra token và tải ROM
                 $.ajax({
-                    url: `${ngrokUrl}/api/download-rom`, // Sử dụng URL Ngrok động
+                    url: `https://711f-113-177-113-19.ngrok-free.app/api/download-rom`, // Sử dụng URL Ngrok động
                     method: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify({ token: token, romId: deviceName }),
