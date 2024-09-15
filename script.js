@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     // Lấy URL Ngrok từ API
     $.ajax({
-        url: 'https://97e8-113-177-113-19.ngrok-free.app/api/ngrok-url', // Gọi API lấy URL từ server
+        url: 'https://711f-113-177-113-19.ngrok-free.app/api/ngrok-url', // Gọi API lấy URL từ server
         method: 'GET',
         success: function(response) {
             ngrokUrl = response.ngrokUrl;
