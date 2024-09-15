@@ -1,4 +1,19 @@
 $(document).ready(function() {
+    let ngrokUrl = ''; // Biến để lưu URL Ngrok
+
+    // Lấy URL Ngrok từ API
+    $.ajax({
+        url: '/api/ngrok-url', // API lấy URL Ngrok từ server
+        method: 'GET',
+        success: function(response) {
+            ngrokUrl = response.ngrokUrl;
+            console.log("URL Ngrok:", ngrokUrl);
+        },
+        error: function() {
+            console.error('Không thể lấy được URL Ngrok');
+        }
+    });
+
     // Lấy dữ liệu từ JSON
     fetch('rom-data.json')
         .then(response => response.json())
@@ -117,7 +132,7 @@ $(document).ready(function() {
 
                 // Gửi yêu cầu tới API để kiểm tra token và tải ROM
                 $.ajax({
-                    url: 'https://9a4e-113-177-113-19.ngrok-free.app/api/download-rom',
+                    url: `${ngrokUrl}/api/download-rom`, // Sử dụng URL Ngrok động
                     method: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify({ token: token, romId: romId }),
