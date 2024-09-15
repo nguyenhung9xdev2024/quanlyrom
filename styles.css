@@ -89,7 +89,7 @@ th, td {
 
 .view-details-btn {
     padding: 10px 15px;
-    background-color: #e53935;
+    background-color: #d4af37;
     color: white;
     border: none;
     border-radius: 5px;
@@ -97,7 +97,7 @@ th, td {
 }
 
 .view-details-btn:hover {
-    background-color: #d32f2f;
+    background-color: #d4af37;
 }
 
 /* CSS cho Popup */
