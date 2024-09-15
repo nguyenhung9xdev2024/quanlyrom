@@ -117,7 +117,7 @@ $(document).ready(function() {
 
                 // Gửi yêu cầu tới API để kiểm tra token và tải ROM
                 $.ajax({
-                    url: 'https://api.ittech.vn/api/download-rom',
+                    url: 'https://529b-113-177-113-19.ngrok-free.app/api/download-rom',
                     method: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify({ token: token, romId: romId }),
