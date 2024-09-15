@@ -108,8 +108,9 @@ th, td {
 /* CSS cho bộ lọc */
 .filter-container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -117,11 +118,12 @@ th, td {
     margin-right: 10px;
 }
 
-.filter-container input, .filter-container select {
-    padding: 5px;
-    margin-right: 10px;
+.filter-container input,
+.filter-container select {
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    min-width: 200px; /* Đảm bảo trường nhập có kích thước tối thiểu */
 }
 
 #filter-btn {
@@ -204,6 +206,17 @@ th, td {
     
     .container {
         padding: 10px;
+    }
+
+    .filter-container {
+        flex-direction: column; /* Chuyển từ hàng sang cột khi màn hình nhỏ */
+        align-items: stretch; /* Căn chỉnh các phần tử để chiếm toàn bộ chiều ngang */
+    }
+
+    .filter-container input,
+    .filter-container select,
+    #filter-btn {
+        width: 100%; /* Các trường và nút chiếm toàn bộ chiều rộng */
     }
 
     .rom-card-container {
