@@ -29,6 +29,48 @@
     },
     {
         "release_date": "14/09/2024",
+        "device_name": "Samsung Galaxy S8",
+        "android_version": "",
+        "name": "SAMSUNG",
+        "rom_type": "",
+        "rom_details": "",
+        "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s8-.jpg",
+        "hardware_specs": {
+            "cpu": "",
+            "ram": "",
+            "storage": ""
+        }
+    },
+    {
+        "release_date": "14/09/2024",
+        "device_name": "Samsung Galaxy Note 8",
+        "android_version": "",
+        "name": "SAMSUNG",
+        "rom_type": "",
+        "rom_details": "",
+        "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-note-8-sm-n950.jpg",
+        "hardware_specs": {
+            "cpu": "",
+            "ram": "",
+            "storage": ""
+        }
+    },
+    {
+        "release_date": "14/09/2024",
+        "device_name": "Samsung Galaxy S8+",
+        "android_version": "",
+        "name": "SAMSUNG",
+        "rom_type": "",
+        "rom_details": "",
+        "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s8-plus-.jpg",
+        "hardware_specs": {
+            "cpu": "",
+            "ram": "",
+            "storage": ""
+        }
+    },
+    {
+        "release_date": "14/09/2024",
         "device_name": "Samsung Galaxy A04",
         "android_version": "14",
         "name": "SAMSUNG",
