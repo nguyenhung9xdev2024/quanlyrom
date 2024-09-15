@@ -9,7 +9,7 @@ $(document).ready(function() {
                         <img src="${rom.image_url}" alt="${rom.device_name}" class="rom-image">
                         <h3>${rom.device_name}</h3>
                         <p>Phiên bản Android: ${rom.android_version}</p>
-                        <p>Ngày phát hành: ${rom.release_date}</p>
+                        <p>Thể loại rom: ${rom.rom_type}</p>
                         <button class="view-details-btn" 
                             data-details="${rom.rom_details}" 
                             data-image="${rom.image_url}" 
