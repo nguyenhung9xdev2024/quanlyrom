@@ -101,6 +101,10 @@ th, td {
     background-color: #d4af37;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 /* CSS cho Popup */
 .popup {
     display: none;
@@ -162,20 +166,24 @@ th, td {
 
 /* Reponsive */
 @media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
     .container {
         padding: 10px;
     }
 
     .rom-card-container {
-        display: grid;
-        padding: 0 15px;
+        width: 100%;
+        padding: 0;
         grid-template-columns: 1fr; /* Một cột trên thiết bị di động */
         gap: 20px;
     }
 
     .rom-card {
         width: 100%;
-        margin-bottom: 20px;
+        margin: 0 auto;
     }
 
     .rom-image {
