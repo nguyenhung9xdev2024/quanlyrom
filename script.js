@@ -100,7 +100,39 @@ $(document).ready(function() {
             $('#hardware_ram').text(hardwareRam);
             $('#hardware_storage').text(hardwareStorage);
 
+            // Hiển thị popup và thêm chức năng tải ROM với token
             $('#rom-detail-popup').show();
+
+            // Thêm nút nhập token và tải ROM
+            $('#rom-download-container').html(`
+                <input type="text" id="download-token" placeholder="Nhập token để tải ROM" />
+                <button id="download-rom-btn" data-rom-id="${deviceName}">Tải ROM</button>
+                <p id="download-message" style="color: red;"></p>
+            `);
+
+            // Sự kiện click cho nút tải ROM
+            $('#download-rom-btn').on('click', function() {
+                var token = $('#download-token').val();
+                var romId = $(this).data('rom-id');
+
+                // Gửi yêu cầu tới API để kiểm tra token và tải ROM
+                $.ajax({
+                    url: 'https://api.ittech.vn/api/download-rom',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ token: token, romId: romId }),
+                    success: function(response) {
+                        if (response.success) {
+                            window.location.href = response.romLink;  // Tải ROM
+                        } else {
+                            $('#download-message').text('Token không hợp lệ. Vui lòng thử lại.');
+                        }
+                    },
+                    error: function() {
+                        $('#download-message').text('Đã xảy ra lỗi. Vui lòng thử lại sau.');
+                    }
+                });
+            });
         });
     }
 
