@@ -16,6 +16,23 @@
         <input type="text" id="search-box" placeholder="Nhập tên thiết bị hoặc phiên bản Android...">
         <button id="search-btn">Tìm kiếm</button>
 
+        <div class="filter-container">
+            <label for="device-filter">Tên thiết bị:</label>
+            <input type="text" id="device-filter" placeholder="Nhập tên thiết bị...">
+        
+            <label for="version-filter">Phiên bản Android:</label>
+            <input type="number" id="version-filter" placeholder="Nhập phiên bản Android...">
+        
+            <label for="rom-type-filter">Thể loại ROM:</label>
+            <select id="rom-type-filter">
+                <option value="">Tất cả</option>
+                <option value="ROM Gốc">ROM Gốc</option>
+                <option value="Custom ROM">Custom ROM</option>
+            </select>
+        
+            <button id="filter-btn">Lọc</button>
+        </div>
+        
         <div class="rom-card-container">
             <!-- Các thẻ ROM sẽ được thêm từ file JSON thông qua JavaScript -->
         </div>
