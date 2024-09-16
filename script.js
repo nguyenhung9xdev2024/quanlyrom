@@ -89,7 +89,7 @@ $(document).ready(function() {
                     if (data.success) {
                         $('#download-count').text(data.downloadCount);  // Hiển thị số lượt tải
                     } else {
-                        $('#download-count').text('Không tìm thấy số lượt tải');
+                        $('#download-count').text('0');
                     }
                 })
                 .catch(error => {
