@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     // Lấy URL Ngrok từ API
     $.ajax({
-        url: 'https://711f-113-177-113-19.ngrok-free.app/api/ngrok-url', // Gọi API lấy URL từ server
+        url: 'https://2816-183-80-125-186.ngrok-free.app/api/ngrok-url', // Gọi API lấy URL từ server
         method: 'GET',
         success: function(response) {
             ngrokUrl = response.ngrokUrl;
@@ -132,7 +132,7 @@ $(document).ready(function() {
 
                 // Gửi yêu cầu tới API để kiểm tra token và tải ROM
                 $.ajax({
-                    url: `https://711f-113-177-113-19.ngrok-free.app/api/download-rom`, // Sử dụng URL Ngrok động
+                    url: `https://2816-183-80-125-186.ngrok-free.app/api/download-rom`, // Sử dụng URL Ngrok động
                     method: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify({ token: token, romId: deviceName }),

@@ -83,6 +83,7 @@
             "ram": "3/4/6/8GB",
             "storage": "32/64/128GB"
         }
+        "rom_link": "/roms/samsung-galaxy-a04-rom.zip"
     },
     {
         "release_date": "14/09/2024",
