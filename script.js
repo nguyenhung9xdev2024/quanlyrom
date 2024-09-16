@@ -136,6 +136,16 @@ $(document).ready(function() {
         });
     }
 
+    // Khi trang web được tải, hiển thị popup với class popup-notice
+    window.onload = function() {
+        document.querySelector('.popup-notice').style.display = 'flex';
+    };
+  
+    // Đóng popup khi nhấn nút Đóng
+    document.getElementById('close-popup-btn').onclick = function() {
+        document.querySelector('.popup-notice').style.display = 'none';
+    };
+
     // Đóng popup khi bấm vào nút đóng (x)
     $('.close').on('click touchend', function() {
         $('#rom-detail-popup').hide();

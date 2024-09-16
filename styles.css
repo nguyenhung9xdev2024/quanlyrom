@@ -199,6 +199,50 @@ th, td {
     height: auto;
 }
 
+/* CSS cho Popup với class popup-notice */
+.popup-notice {
+    display: none; /* Ẩn popup mặc định */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Nền tối */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-notice .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px; /* Độ rộng tối đa */
+    max-height: 80vh; /* Chiều cao tối đa, đảm bảo không vượt quá màn hình */
+    overflow-y: auto; /* Cho phép cuộn nếu nội dung quá dài */
+    text-align: center;
+  }
+  
+  .popup-notice .popup-body {
+    max-height: 60vh; /* Đặt chiều cao cho nội dung, để tránh chiếm toàn bộ màn hình */
+    overflow-y: auto; /* Cuộn nội dung khi quá dài */
+    margin-bottom: 20px;
+  }
+  
+  .popup-notice #close-popup-btn {
+    background-color: #d4af37;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .popup-notice #close-popup-btn:hover {
+    background-color: #b5892b;
+  }
+  
 /* Reponsive */
 @media screen and (max-width: 768px) {
     body {
