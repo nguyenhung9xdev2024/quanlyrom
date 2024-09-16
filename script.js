@@ -117,7 +117,7 @@ $(document).ready(function() {
 
                 // Gửi yêu cầu tới API để kiểm tra token và tải ROM
                 $.ajax({
-                    url: 'https://635c-183-80-125-186.ngrok-free.app/api/download-rom',
+                    url: 'http://localhost:3000/api/download-rom',
                     method: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify({ token: token, romId: deviceName }),
