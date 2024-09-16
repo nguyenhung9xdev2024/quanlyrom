@@ -117,7 +117,7 @@ $(document).ready(function() {
 
                 // Gửi yêu cầu tới API để kiểm tra token và tải ROM
                 $.ajax({
-                    url: 'http://localhost:3000/api/download-rom',
+                    url: 'https://hung.ittech.vn/api/download-rom',
                     method: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify({ token: token, romId: deviceName }),
@@ -129,7 +129,7 @@ $(document).ready(function() {
                         }
                     },
                     error: function() {
-                        $('#download-message').text('Đã xảy ra lỗi. Vui lòng thử lại sau.');
+                        $('#download-message').text('Token không hợp lệ. Vui lòng thử lại.');
                     }
                 });
             });
