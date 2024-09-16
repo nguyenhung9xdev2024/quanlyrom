@@ -199,6 +199,14 @@ th, td {
     height: auto;
 }
 
+.download-counter {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
 /* CSS cho Popup với class popup-notice */
 .popup-notice {
     display: none; /* Ẩn popup mặc định */
@@ -242,7 +250,7 @@ th, td {
   .popup-notice #close-popup-btn:hover {
     background-color: #b5892b;
   }
-  
+
 /* Reponsive */
 @media screen and (max-width: 768px) {
     body {
