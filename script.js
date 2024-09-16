@@ -6,37 +6,19 @@ $(document).ready(function() {
             let container = $('.rom-card-container');
             renderRomCards(data, container);
 
-            // Kiểm tra xem dữ liệu JSON có được nạp đúng không
-            console.log("Dữ liệu ROM:", data);
-
             // Thêm sự kiện cho nút lọc
             $('#filter-btn').on('click', function() {
-                console.log("Nút lọc được nhấn");
-
-                // Lấy giá trị từ các bộ lọc và loại bỏ khoảng trắng dư thừa
                 const deviceFilter = $('#device-filter').val().trim().toLowerCase();
                 const versionFilter = $('#version-filter').val().trim();
                 const romTypeFilter = $('#rom-type-filter').val().trim();
-
-                console.log("Bộ lọc tên thiết bị:", deviceFilter);
-                console.log("Bộ lọc phiên bản Android:", versionFilter);
-                console.log("Bộ lọc thể loại ROM:", romTypeFilter);
 
                 const filteredData = data.filter(rom => {
                     const deviceMatch = rom.device_name.toLowerCase().includes(deviceFilter);
                     const versionMatch = versionFilter === '' || rom.android_version == versionFilter;
                     const romTypeMatch = romTypeFilter === '' || rom.rom_type.trim().toLowerCase() === romTypeFilter.toLowerCase();
-                    
-                    // Kiểm tra điều kiện lọc cho từng rom
-                    console.log("Thiết bị:", rom.device_name, " - deviceMatch:", deviceMatch, 
-                                " - versionMatch:", versionMatch, " - romTypeMatch:", romTypeMatch);
-                    
                     return deviceMatch && versionMatch && romTypeMatch;
                 });
 
-                console.log("Dữ liệu đã lọc:", filteredData);
-
-                // Xóa các thẻ cũ và hiển thị các thẻ đã lọc
                 container.empty();
                 renderRomCards(filteredData, container);
             });
@@ -67,7 +49,7 @@ $(document).ready(function() {
         });
 
         // Thêm sự kiện click cho các nút "Xem chi tiết"
-        $('.view-details-btn').on('click touchend', function(event) {
+        $('.view-details-btn').off('click').on('click', function(event) {
             event.preventDefault();
 
             var romDetails = $(this).data('details');
@@ -100,6 +82,16 @@ $(document).ready(function() {
             $('#hardware_ram').text(hardwareRam);
             $('#hardware_storage').text(hardwareStorage);
 
+            // Gọi API để lấy số lượt tải và hiển thị
+            fetch(`https://hung.ittech.vn/api/get-download-count?romId=${deviceName}`)
+                .then(response => response.json())
+                .then(data => {
+                    $('#download-count').text(data.downloadCount);  // Hiển thị số lượt tải
+                })
+                .catch(error => {
+                    console.error('Lỗi khi lấy số lượt tải:', error);
+                });
+
             // Hiển thị popup và thêm chức năng tải ROM với token
             $('#rom-detail-popup').show();
 
@@ -111,16 +103,21 @@ $(document).ready(function() {
             `);
 
             // Sự kiện click cho nút tải ROM
-            $('#download-rom-btn').on('click', function() {
+            $('#download-rom-btn').off('click').on('click', function() {
                 var token = $('#download-token').val();
                 var romId = $(this).data('rom-id');
+
+                if (!token) {
+                    $('#download-message').text('Vui lòng nhập token.');
+                    return;
+                }
 
                 // Gửi yêu cầu tới API để kiểm tra token và tải ROM
                 $.ajax({
                     url: 'https://hung.ittech.vn/api/download-rom',
                     method: 'POST',
                     contentType: 'application/json',
-                    data: JSON.stringify({ token: token, romId: deviceName }),
+                    data: JSON.stringify({ token: token, romId: romId }),
                     success: function(response) {
                         if (response.success) {
                             window.location.href = response.romLink;  // Tải ROM
