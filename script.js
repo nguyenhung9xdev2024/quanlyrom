@@ -86,10 +86,15 @@ $(document).ready(function() {
             fetch(`https://hung.ittech.vn/api/get-download-count?romId=${deviceName}`)
                 .then(response => response.json())
                 .then(data => {
-                    $('#download-count').text(data.downloadCount);  // Hiển thị số lượt tải
+                    if (data.success) {
+                        $('#download-count').text(data.downloadCount);  // Hiển thị số lượt tải
+                    } else {
+                        $('#download-count').text('Không tìm thấy số lượt tải');
+                    }
                 })
                 .catch(error => {
                     console.error('Lỗi khi lấy số lượt tải:', error);
+                    $('#download-count').text('Lỗi khi lấy số lượt tải');
                 });
 
             // Hiển thị popup và thêm chức năng tải ROM với token
