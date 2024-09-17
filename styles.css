@@ -231,6 +231,24 @@ th, td {
     border-bottom: none; /* Xóa đường kẻ dưới mục cuối cùng */
 }
 
+/* Khung tiêu đề */
+.rom-details-header {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Biểu tượng lửa trong tiêu đề */
+.rom-details-header img {
+    width: 20px;
+    margin-right: 10px;
+}
+
 .popup-content {
     position: relative;
     padding: 20px;
