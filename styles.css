@@ -220,6 +220,28 @@ th, td {
     height: auto;
 }
 
+#download-token {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+#download-token:hover {
+    border-color: #d4af37;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#download-token:focus {
+    border-color: #d4af37; /* Đổi màu viền khi focus */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
 #rom-download-container button {
     font-size: 16px;
     font-weight: 600;
