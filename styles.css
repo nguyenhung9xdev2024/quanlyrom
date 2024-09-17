@@ -198,13 +198,27 @@ th, td {
 }
 
 #rom-details ul {
-    list-style-type: disc;
-    padding-left: 20px;
+    list-style-type: none;
+    padding-left: 0;
     margin-top: 10px;
     font-size: 16px;
-    font-weight: 400; /* Độ đậm vừa phải cho danh sách */
+    font-weight: 400;
     color: #333;
     line-height: 1.6; /* Tăng khoảng cách dòng */
+}
+
+#rom-details ul li {
+    padding-left: 20px;
+    position: relative; /* Để căn chỉnh dấu "✔" */
+}
+
+#rom-details ul li::before {
+    content: '✔';
+    color: #28a745;
+    font-weight: bold;
+    position: absolute;
+    left: 0px; /* Đặt dấu "✔" ở đầu dòng */
+    top: 0;
 }
 
 .popup-content {
