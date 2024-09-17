@@ -393,9 +393,14 @@ th, td {
 
     #rom-download-container {
         text-align: center;
+        margin-top: 10px;
     }
 
     #download-rom-btn {
         display: inline-block;
+    }
+
+    #download-token {
+        margin-bottom: 20px;
     }
 }
