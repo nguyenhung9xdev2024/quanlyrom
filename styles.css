@@ -390,4 +390,12 @@ th, td {
     #rom-detail-popup {
         z-index: 1000;
     }
+
+    #rom-download-container {
+        text-align: center;
+    }
+
+    #download-rom-btn {
+        display: inline-block;
+    }
 }
