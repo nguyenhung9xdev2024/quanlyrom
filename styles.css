@@ -205,20 +205,31 @@ th, td {
     font-weight: 400;
     color: #333;
     line-height: 1.6; /* Tăng khoảng cách dòng */
+    border: 1px solid #ddd; /* Đường viền cho khung */
+    border-radius: 6px; /* Bo tròn các góc */
+    background-color: #f9f9f9; /* Màu nền sáng */
+    padding: 10px; /* Khoảng cách bên trong khung */
 }
 
 #rom-details ul li {
-    padding-left: 20px;
-    position: relative; /* Để căn chỉnh dấu "✔" */
+    padding: 10px;
+    border-bottom: 1px dashed #ddd; /* Đường gạch ngang giữa các mục */
+    display: flex;
+    align-items: center;
+    position: relative; /* Để căn chỉnh biểu tượng mũi tên */
 }
 
 #rom-details ul li::before {
-    content: '✔';
-    color: #28a745;
+    content: '➤'; /* Biểu tượng mũi tên */
+    color: #000; /* Màu của mũi tên */
     font-weight: bold;
+    margin-right: 10px; /* Khoảng cách giữa mũi tên và nội dung */
     position: absolute;
-    left: 0px; /* Đặt dấu "✔" ở đầu dòng */
-    top: 0;
+    left: 0; /* Đặt mũi tên sát lề trái */
+}
+
+#rom-details ul li:last-child {
+    border-bottom: none; /* Xóa đường kẻ dưới mục cuối cùng */
 }
 
 .popup-content {
