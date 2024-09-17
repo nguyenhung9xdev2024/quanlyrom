@@ -212,20 +212,19 @@ th, td {
 }
 
 #rom-details ul li {
-    padding: 10px;
+    padding: 10px 10px 10px 30px;
     border-bottom: 1px dashed #ddd; /* Đường gạch ngang giữa các mục */
-    display: flex;
-    align-items: center;
     position: relative; /* Để căn chỉnh biểu tượng mũi tên */
 }
 
 #rom-details ul li::before {
-    content: '➤'; /* Biểu tượng mũi tên */
+    content: '▶'; /* Biểu tượng mũi tên */
     color: #000; /* Màu của mũi tên */
     font-weight: bold;
-    margin-right: 10px; /* Khoảng cách giữa mũi tên và nội dung */
     position: absolute;
-    left: 0; /* Đặt mũi tên sát lề trái */
+    left: 10px; /* Đặt mũi tên cách lề trái 10px */
+    top: 50%;
+    transform: translateY(-50%); /* Căn giữa theo chiều dọc */
 }
 
 #rom-details ul li:last-child {
