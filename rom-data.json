@@ -166,7 +166,13 @@
         "name": "SAMSUNG",
         "rom_type": "ROM GỐC",
         "rom_details": "Tính năng 1: Không cần bật USB Debugging, adb tự động\nTính năng 2: Tự khởi động khi có nguồn sạc\nTính năng 3: Reg được mail\nTính năng 4: Sử dụng được không màn",
-        "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a30.jpg"
+        "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a30.jpg",
+        "hardware_specs": {
+            "cpu": "Exynos 7904",
+            "ram": "3/4GB",
+            "storage": "32/64GB"
+        },
+        "rom_link": "/roms/samsung-galaxy-a30-rom.zip"
     },
     {
         "release_date": "14/09/2024",
