@@ -175,13 +175,19 @@
         "rom_link": "/roms/samsung-galaxy-a30-rom.zip"
     },
     {
-        "release_date": "14/09/2024",
+        "release_date": "17/09/2024",
         "device_name": "Samsung Galaxy J6",
         "android_version": "10",
         "name": "SAMSUNG",
         "rom_type": "ROM GỐC",
         "rom_details": "Tính năng 1: Không cần bật USB Debugging\nTính năng 2: Tự khởi động khi có nguồn sạc\nTính năng 3: Reg được mail\nTính năng 4: Sử dụng được không màn",
-        "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-j6-j600.jpg"
+        "image_url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-j6-j600.jpg",
+        "hardware_specs": {
+            "cpu": "Exynos 7870 Octa",
+            "ram": "2/3/4GB",
+            "storage": "32/64GB"
+        },
+        "rom_link": "/roms/samsung-galaxy-j6-rom.zip"
     }
 
 ]
