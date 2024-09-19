@@ -312,45 +312,39 @@ th, td {
 }
 
 #download-token {
-    width: 100%;
-    max-width: 363px;
-    padding: 12px 15px;
-    font-size: 16px;
-    border: 2px solid #ccc;
+    flex-grow: 1;
+    padding: 10px;
     border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    outline: none;
-}
-
-#download-token:hover {
-    border-color: #d4af37;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-#download-token:focus {
-    border-color: #d4af37; /* Đổi màu viền khi focus */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ccc;
+    font-size: 14px;
+    height: 42px;
+    box-sizing: border-box;
 }
 
 #download-rom-btn {
     background-color: #d4af37;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 10px 16px;
     font-size: 16px;
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    display: block; 
-    text-align: center;
-    margin-top: 10px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    height: 42px;
+    display: flex;
+    align-items: center;
+}
+
+#download-rom-btn i {
+    margin-right: 8px;
 }
 
 #download-rom-btn:hover {
     background-color: #b5892b;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 #download-rom-btn:active {
