@@ -303,6 +303,14 @@ th, td {
     height: auto;
 }
 
+#rom-download-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
 #download-token {
     width: 100%;
     max-width: 363px;
