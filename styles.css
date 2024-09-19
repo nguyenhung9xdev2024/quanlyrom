@@ -332,17 +332,23 @@ th, td {
     padding: 12px 20px;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    display: inline-block;
+    display: block; 
     width: 100%;
     text-align: center;
+    margin-top: 10px;
 }
 
 #download-rom-btn:hover {
     background-color: #b5892b;
     transform: scale(1.05);
+}
+
+#download-rom-btn:active {
+    background-color: #997021;
+    transform: scale(1);
 }
 
 .download-counter {
