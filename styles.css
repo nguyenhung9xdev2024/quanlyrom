@@ -142,15 +142,35 @@ th, td {
 }
 
 /* CSS cho Popup */
+.hardware-section {
+    margin-top: 20px;
+}
+
+.hardware-section h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 .hardware-section i {
     color: #d4af37;
-    margin-right: 8px;
+    margin-right: 10px;
+    font-size: 20px;
 }
 
 .hardware-section p {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+}
+
+.hardware-section strong {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.hardware-section span {
+    font-size: 16px;
 }
 
 .popup {
