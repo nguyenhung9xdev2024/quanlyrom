@@ -325,18 +325,24 @@ th, td {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-#rom-download-container button {
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
+#download-rom-btn {
     background-color: #d4af37;
+    color: white;
+    border: none;
     padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
     border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 }
 
-#rom-download-container button:hover {
+#download-rom-btn:hover {
     background-color: #b5892b;
+    transform: scale(1.05);
 }
 
 .download-counter {
