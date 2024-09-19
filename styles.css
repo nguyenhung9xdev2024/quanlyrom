@@ -142,6 +142,17 @@ th, td {
 }
 
 /* CSS cho Popup */
+.hardware-section i {
+    color: #d4af37;
+    margin-right: 8px;
+}
+
+.hardware-section p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
 .popup {
     display: none;
     position: fixed;
