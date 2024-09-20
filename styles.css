@@ -317,6 +317,12 @@ th, td {
     gap: 20px;
 }
 
+.rom-label {
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
 .custom-radio {
     position: relative;
     padding-left: 35px;
@@ -326,7 +332,7 @@ th, td {
     display: flex;
     align-items: center;
     color: #333;
-}
+    white-space: nowrap;
 
 .custom-radio input[type="radio"] {
     position: absolute;
