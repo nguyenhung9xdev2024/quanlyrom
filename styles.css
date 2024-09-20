@@ -314,15 +314,16 @@ th, td {
 .rom-type-section {
     margin-top: 20px;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .custom-radio {
     position: relative;
-    padding-left: 30px;
+    padding-left: 35px;
     cursor: pointer;
-    font-size: 16px;
-    display: inline-flex;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
     align-items: center;
     color: #333;
 }
@@ -335,17 +336,19 @@ th, td {
 
 .radio-btn {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
+    transform: translateY(-50%);
     height: 20px;
     width: 20px;
     background-color: #ddd;
     border-radius: 50%;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .custom-radio input:checked ~ .radio-btn {
     background-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.5);
 }
 
 .radio-btn::after {
@@ -359,16 +362,17 @@ th, td {
 }
 
 .custom-radio .radio-btn::after {
-    top: 5px;
-    left: 5px;
-    width: 10px;
-    height: 10px;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background: white;
 }
 
 .custom-radio:hover input ~ .radio-btn {
     background-color: #ccc;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
 #download-token {
