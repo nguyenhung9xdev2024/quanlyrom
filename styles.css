@@ -240,6 +240,7 @@ th, td {
 
 /* Khung tiêu đề */
 .rom-details-header {
+    margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
     background-color: #eee;
@@ -314,7 +315,8 @@ th, td {
 .rom-type-section {
     margin-top: 20px;
     display: flex;
-    gap: 13px;
+    gap: 17px;
+    margin-bottom: 20px;
 }
 
 .rom-label {
