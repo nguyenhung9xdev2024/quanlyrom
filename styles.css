@@ -313,14 +313,62 @@ th, td {
 
 .rom-type-section {
     margin-top: 20px;
+    display: flex;
+    gap: 15px;
 }
 
-.rom-type-section input[type="radio"] {
-    margin-right: 5px;
+.custom-radio {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    color: #333;
 }
 
-.rom-type-section label {
-    margin-right: 15px;
+.custom-radio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #ddd;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.custom-radio input:checked ~ .radio-btn {
+    background-color: #d4af37;
+}
+
+.radio-btn::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-radio input:checked ~ .radio-btn::after {
+    display: block;
+}
+
+.custom-radio .radio-btn::after {
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+}
+
+.custom-radio:hover input ~ .radio-btn {
+    background-color: #ccc;
 }
 
 #download-token {
@@ -510,5 +558,9 @@ th, td {
 
     #download-token {
         margin-bottom: 20px;
+    }
+
+    .rom-type-section {
+        flex-direction: column;
     }
 }
