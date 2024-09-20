@@ -58,6 +58,7 @@ $(document).ready(function() {
             var deviceName = $(this).data('device-name');
             var androidVersion = $(this).data('android-version');
             var releaseDate = $(this).data('release-date');
+            var romType = $(this).data('rom-type');
 
             // Thông số phần cứng
             var hardwareCpu = $(this).data('hardware-cpu');
