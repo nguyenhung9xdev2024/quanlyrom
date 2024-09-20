@@ -228,67 +228,35 @@ th, td {
     flex: 2;
 }
 
+.feature-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: #f9f9f9;
+}
+
 /* Khung chứa toàn bộ phần tính năng */
-.rom-details {
-    border: 1px solid #ddd; /* Viền chung cho cả tiêu đề và danh sách */
-    border-radius: 6px; /* Bo tròn các góc */
-    background-color: #f9f9f9; /* Màu nền sáng */
-    max-width: 600px; /* Độ rộng tối đa */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho khung */
-    overflow: hidden; /* Đảm bảo bo tròn không bị ảnh hưởng */
+#rom-details {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
 }
 
 /* Khung tiêu đề */
 .rom-details-header {
-    margin-top: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #eee;
-    padding: 10px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #ddd; /* Đường viền dưới tiêu đề */
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 /* Biểu tượng lửa trong tiêu đề */
 .rom-details-header img {
-    width: 20px;
-    margin-right: 10px;
-}
-
-/* Danh sách tính năng */
-.rom-details ul {
-    list-style-type: none; /* Xóa ký hiệu mặc định */
-    padding-left: 0; /* Xóa thụt lề mặc định */
-    margin: 0; /* Reset khoảng cách trên và dưới */
-    font-size: 16px;
-    font-weight: 400;
-    color: #333;
-    line-height: 1.6; /* Tăng khoảng cách dòng */
-    background-color: #fff; /* Màu nền trắng cho danh sách */
-}
-
-/* Mục danh sách */
-.rom-details ul li {
-    padding: 10px 10px 10px 30px; /* Tăng khoảng cách bên trái để tránh đè lên mũi tên */
-    border-bottom: 1px dashed #ddd; /* Đường gạch ngang giữa các mục */
-    position: relative; /* Để căn chỉnh biểu tượng mũi tên */
-}
-
-/* Biểu tượng mũi tên trong danh sách */
-.rom-details ul li::before {
-    content: '▶'; /* Biểu tượng mũi tên */
-    color: #000; /* Màu của mũi tên */
-    font-weight: bold;
-    position: absolute;
-    left: 10px; /* Đặt mũi tên cách lề trái 10px */
-    top: 50%;
-    transform: translateY(-50%); /* Căn giữa theo chiều dọc */
-}
-
-/* Xóa đường kẻ dưới mục cuối cùng */
-.rom-details ul li:last-child {
-    border-bottom: none;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
 }
 
 .popup-content {
