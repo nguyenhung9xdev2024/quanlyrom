@@ -333,6 +333,7 @@ th, td {
     align-items: center;
     color: #333;
     white-space: nowrap;
+}
 
 .custom-radio input[type="radio"] {
     position: absolute;
