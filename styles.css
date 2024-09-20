@@ -311,6 +311,18 @@ th, td {
     max-width: 400px;
 }
 
+.rom-type-section {
+    margin-top: 20px;
+}
+
+.rom-type-section input[type="radio"] {
+    margin-right: 5px;
+}
+
+.rom-type-section label {
+    margin-right: 15px;
+}
+
 #download-token {
     flex-grow: 1;
     padding: 10px;

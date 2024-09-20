@@ -82,6 +82,17 @@ $(document).ready(function() {
             $('#hardware_ram').text(hardwareRam);
             $('#hardware_storage').text(hardwareStorage);
 
+            // Buttons cho loại ROM
+            if (romType === 'ROM Gốc') {
+                $('#rom-goc').prop('checked', true);
+            } else if (romType === 'ROM Cook') {
+                $('#rom-cook').prop('checked', true);
+            } else if (romType === 'ROM Tùy Chỉnh') {
+                $('#rom-custom').prop('checked', true);
+            } else {
+                $('input[name="rom-type"]').prop('checked', false);
+            }
+
             // Gọi API để lấy số lượt tải và hiển thị
             fetch(`https://hung.ittech.vn/api/get-download-count?romId=${deviceName}`)
                 .then(response => response.json())
