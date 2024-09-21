@@ -233,7 +233,12 @@ th, td {
     border-radius: 10px;
     padding: 15px;
     margin-top: 30px;
+    box-sizing: border-box;
+    max-width: 100%;
     background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 /* Khung chứa toàn bộ phần tính năng */
@@ -241,6 +246,8 @@ th, td {
     font-size: 16px;
     line-height: 1.5;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Khung tiêu đề */
@@ -250,6 +257,7 @@ th, td {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 /* Biểu tượng lửa trong tiêu đề */
