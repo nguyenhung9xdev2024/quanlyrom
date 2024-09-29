@@ -192,8 +192,8 @@ th, td {
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 800px;
+    width: 90%;
+    max-width: 1200px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
