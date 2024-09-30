@@ -31,8 +31,6 @@ $(document).ready(function() {
                 <div class="rom-card">
                     <img src="${rom.image_url}" alt="${rom.device_name}" class="rom-image">
                     <h3>${rom.device_name}</h3>
-                    <p>Phiên bản Android: ${rom.android_version}</p>
-                    <p>Thể loại rom: ${rom.rom_type}</p>
                     <button class="view-details-btn" 
                         data-details="${rom.rom_details ? rom.rom_details : 'Updating'}" 
                         data-image="${rom.image_url ? rom.image_url : 'Updating' }" 
